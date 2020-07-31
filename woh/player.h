@@ -10,8 +10,9 @@ class Player
 public:
 	virtual ~Player();
 
+	// east(0) to north(3)
 	virtual void sit(int s) = 0;
-	// when a game start, set init cards for player
+	// when a round start, set init cards for player
 	virtual void set_cards(vector<Card> cards) = 0;
 	// player need to select 3 cards to swap with another player
 	virtual vector<Card> swap(int num) = 0;
@@ -19,6 +20,7 @@ public:
 	virtual void rcv_swap(const vector<Card>& cards) = 0;
 	// play a card in a round
 	virtual Card play_card(const vector<Card>& deck) = 0;
+	// 
 	virtual void circle_end(int sit, const vector<Card>& cards) = 0;
 
 	// player name

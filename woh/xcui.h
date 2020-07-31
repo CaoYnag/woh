@@ -1,15 +1,14 @@
-#include "ui.h"
-#include <vector>
-#include <string>
-using namespace std;
+#pragma once
+#include "cui.h"
+#include <fstream>
 
-class ConsoleUI : public GameUI
+class ExCUI : public ConsoleUI
 {
 protected:
-	vector<string> _players;
-	int _rnd;
+    FILE* fp;
 public:
-	virtual ~ConsoleUI();
+    ExCUI();
+    virtual ~ExCUI();
 
 	virtual void init_player(vector<string> player);
 	virtual void game_start();
