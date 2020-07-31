@@ -31,7 +31,7 @@ make
 
 ## interface
 
-> see [player.h](woh/player.h)
+> see [player.h](woh/player.h) and [minmon.cpp](ai/minmon.cpp)
 
 ```c++
 // 一局游戏开始，为玩家分配座位
@@ -50,3 +50,7 @@ virtual void circle_end(int sit, const vector<Card>& cards) = 0;
 // 实现以提供玩家名字
 virtual string name() const = 0;
 ```
+
+# notice
+
+代码最好提交到`ai/{yourname}`下,并且用自己的命名空间以避免冲突.
