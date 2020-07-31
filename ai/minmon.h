@@ -1,8 +1,9 @@
 #pragma once
-#include <game.h>
+#include "../woh/player.h"
 #include <vector>
 #include <list>
 #include <map>
+#include <string>
 using namespace std;
 
 class MinMon : public Player

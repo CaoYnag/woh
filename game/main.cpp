@@ -1,6 +1,7 @@
 #include <iostream>
-#include <game.h>
-#include <ai.h>
+#include "../woh/cui.h"
+#include "../woh/game.h"
+#include "../ai/ai.h"
 #include <ctime>
 #include <conio.h>
 using namespace std;

@@ -1,4 +1,5 @@
-﻿#include "game.h"
+﻿#include "cui.h"
+#include "game.h"
 #include <iostream>
 #include <string>
 #include <algorithm>

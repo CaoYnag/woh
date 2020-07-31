@@ -1,10 +1,22 @@
-#include "MinMon.h"
+#include "minmon.h"
+#include "../woh/game.h"
 #include <algorithm>
 #include <iostream>
+#include <cstdlib>
 using namespace std;
+
+#ifdef __linux__
+string itoa(int num, char*, int)
+{
+	char buff[1024];
+	sprintf(buff, "%d", num);
+	return buff;
+}
+#endif
 
 MinMon::MinMon()
 {
+
 }
 
 
