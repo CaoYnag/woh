@@ -4,11 +4,18 @@
 
 ExCUI::ExCUI()
 {
-    
+    auto t = time(nullptr);
+    auto tm = localtime(&t);
+    char tbuff[1024];
+    strftime(tbuff, 1024, "%Y%m%d_%H%M%S", tm);
+    char buff[1024];
+    sprintf(buff, "woh_%s.rec", tbuff);
+    fp = fopen(buff, "w+");
 }
 
  ExCUI::~ExCUI()
  {
+     fclose(fp);
  }
 
  void ExCUI::init_player(vector<string> player)
@@ -28,7 +35,7 @@ ExCUI::ExCUI()
 
  void ExCUI::wash_cards(vector<Coord> swaps)
  {
-     ConsoleUI::wash_cards(swaps)
+     ConsoleUI::wash_cards(swaps);
  }
 
  void ExCUI::dispatch_cards(int sit, vector<Card> cards)
