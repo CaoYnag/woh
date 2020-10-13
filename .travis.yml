@@ -11,4 +11,4 @@ compiler:
 script:
   - mkdir build;cd build;cmake ..;make
 before_install:
-  - if [ $TRAVIS_OS_NAME == linux ]; then git clone https://github.com/zoelabbb/conio.h.git;sudo cd conio.h;cp conio.h /usr/local/include; fi
+  - if [ $TRAVIS_OS_NAME == linux ]; then git clone https://github.com/zoelabbb/conio.h.git;cd conio.h;sudo cp conio.h /usr/local/include; fi
